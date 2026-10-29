@@ -1,0 +1,8 @@
+/* ページ最上部の細い帯 */
+.banner {
+    padding: 8px 24px;
+    background: var(--color-sun-soft);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-ink);
+}

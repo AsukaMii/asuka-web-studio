@@ -2,6 +2,7 @@
 import styles from "./page.module.css";
 import { business } from "@/data/business";
 import ChatWidget from "@/components/ChatWidget";
+import DemoBanner from "@/components/DemoBanner";
 // セクションのコンポーネント
 import Worries from "@/components/Worries";
 import Strengths from "@/components/Strengths";
@@ -18,6 +19,9 @@ export default function Home() {
   return (
     <>
       {/* ↑ <> </> は「フラグメント」。余計なdivを増やさずに複数の要素をまとめる */}
+
+      {/* ===== デモサイトのお知らせ ===== */}
+      <DemoBanner />
 
       {/* ===== ヘッダー ===== */}
       <header className={styles.header}>

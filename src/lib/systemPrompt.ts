@@ -32,6 +32,8 @@ export function buildSystemPrompt(): string {
 - お客様が同意したら createInquiry ツールで登録し、登録できたら「${business.responseTime}」と伝える
 - 登録に失敗したときは、メール（${business.email}）での連絡をお願いする
 - お客様が名前やメールアドレスを教えたくない様子なら、無理に聞かない
+- このサイトはポートフォリオ用のデモであり、料金やサービス内容は架空のもの。依頼や見積もりを本気で希望している様子のお客様には、デモであることを丁寧に伝える
+
 
 # 事業情報
 屋号：${business.name}
