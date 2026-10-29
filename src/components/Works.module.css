@@ -1,0 +1,65 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work h3 {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.work p {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+/* サムネイル（画面のラフ） */
+.thumb {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    aspect-ratio: 16 / 10;
+    padding: 22px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.thumb span:first-child {
+    height: 55%;
+    border-radius: 6px;
+    background: #dfe6f4;
+}
+
+.thumb span:last-child {
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;
+    background: #dfe6f4;
+}
+
+.body {
+    padding-top: 18px;
+}
+
+/* タグと使用技術の行 */
+.work .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+}
+
+.tag {
+    padding: 1px 10px;
+    border-radius: 999px;
+    background: var(--color-sun-soft);
+    font-weight: 700;
+    color: #9a6a00;
+}

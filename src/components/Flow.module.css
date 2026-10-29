@@ -1,0 +1,69 @@
+/* PCは6列、タブレットは3列、スマホは1列 */
+.list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .list {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+    }
+}
+
+.item {
+    position: relative;
+}
+
+/* 番号どうしをつなぐ線 */
+.item::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 40px;
+    right: -20px;
+    height: 2px;
+    background: var(--color-line);
+}
+
+/* 最後の項目には線を出さない */
+.item:last-child::before {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .item::before {
+        display: none;
+    }
+}
+
+.num {
+    position: relative;
+    /* 線より手前に出す */
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    font-weight: 700;
+    color: #fff;
+}
+
+.item h3 {
+    margin: 16px 0 6px;
+    font-size: 1rem;
+}
+
+.item p {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}

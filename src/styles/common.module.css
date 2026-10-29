@@ -1,0 +1,36 @@
+/* ===== 複数のセクションで使う共通スタイル ===== */
+
+/* 中央寄せの入れ物 */
+.container {
+    width: min(100% - 48px, var(--container));
+    margin-inline: auto;
+}
+
+/* セクションの上下余白 */
+.section {
+    padding: 104px 0;
+}
+
+/* 薄い青グレーの背景で区切る */
+.tinted {
+    background: var(--color-surface);
+}
+
+/* セクション見出し（左揃え・下に短いひまわり色の線） */
+.title {
+    margin-bottom: 48px;
+    font-size: clamp(1.5rem, 1.2rem + 1.1vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-top: 16px;
+    border-radius: 2px;
+    background: var(--color-sun);
+}

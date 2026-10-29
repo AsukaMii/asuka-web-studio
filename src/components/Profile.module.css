@@ -1,0 +1,69 @@
+.card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding: 48px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+}
+
+@media (max-width: 700px) {
+    .card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+}
+
+/* 写真の代わりの丸 */
+.avatar {
+    display: grid;
+    place-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--color-sun-soft);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #c98a00;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+/* 肩書き */
+.name span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.text {
+    max-width: 40em;
+    margin-top: 16px;
+    color: var(--color-muted);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.skills li {
+    display: flex;
+    gap: 10px;
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    font-size: 0.88rem;
+}
+
+.skills strong {
+    color: var(--color-primary);
+}

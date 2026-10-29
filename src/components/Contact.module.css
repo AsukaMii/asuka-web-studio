@@ -1,0 +1,54 @@
+/* 藍色の帯 */
+.contact {
+    padding: 88px 0;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+/* 左に文章、右にボタン（狭い画面では縦に並ぶ） */
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.title {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+}
+
+.lead {
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ひまわり色のボタン */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 32px;
+    border-radius: var(--radius-sm);
+    background: var(--color-sun);
+    font-weight: 700;
+    color: var(--color-ink);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #ffcb5c;
+}
+
+.meta {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}

@@ -1,0 +1,45 @@
+/* 濃紺の背景でページにメリハリをつける */
+.worries {
+    padding: 96px 0;
+    background: var(--color-ink);
+    color: #fff;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 700px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.list li {
+    position: relative;
+    padding: 20px 24px 20px 56px;
+    border-radius: var(--radius-md);
+    background: rgb(255 255 255 / 0.07);
+}
+
+/* チェックマーク（L字の線を回転させて描く） */
+.list li::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 14px;
+    height: 8px;
+    border-left: 2.5px solid var(--color-sun);
+    border-bottom: 2.5px solid var(--color-sun);
+    rotate: -45deg;
+}
+
+.answer {
+    margin-top: 36px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-sun);
+}
